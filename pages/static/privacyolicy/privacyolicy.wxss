@@ -1,0 +1,19 @@
+/* privacyolicy.wxss */
+.privacy{
+    margin:40rpx;
+}
+.tishi_item{
+    text-indent: 30rpx;
+}
+.title{
+    font-size: 35rpx;
+    font-weight: bold;
+    color: black;
+    margin-top:30rpx;
+}
+.privacy_item{
+    color: #666666;
+    font-size: 30rpx;
+    margin-top:30rpx;
+    text-indent: 30rpx;
+}

@@ -1,0 +1,4 @@
+/* asset.wxss */
+.asset{
+  margin-top:20rpx; 
+}

@@ -1,0 +1,33 @@
+/* transDetail.wxss */
+.detail{
+  background-color: white;
+  color: grey;
+}
+.tr{
+  text-align: right;
+}
+.detail_inline{
+  display: inline-block
+}
+.detail_flex{
+  flex-direction: row;
+}
+.omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:500rpx;
+}
+.mt{
+  margin-top: 20rpx;
+}
+.left{
+  width:200rpx;
+  text-align:left;
+  /* border:1rpx solid grey; */
+}
+.right{
+  width:500rpx;
+  text-align:right;
+  /* border:1rpx solid grey; */
+}

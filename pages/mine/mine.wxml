@@ -1,0 +1,26 @@
+<!--mine.wxml-->
+<import src="../../common/tpl.wxml" />
+<view class="header">
+  <image src="../../image/etaibao.png" class="img_bg"></image>
+  <view class="txt">
+    <text>当前账号</text>
+  </view>
+  <view class="white">
+    <view class="navigator-text hidden"><text selectable='{{true}}'>{{mywallet.address}}</text></view>
+    <!-- <image class="img wallet" src="../../image/wallet_c.png"></image> -->
+  </view>
+</view>
+<view class="box">
+  <view class="cell" bindtap="help">
+    <template is="urlMine" data="{{url:'help',text:'帮助与支持'}}"></template>
+  </view>
+  <view class="cell" bindtap="feedback">
+    <template is="urlMine" data="{{url:'feedback',text:'问题反馈'}}"></template>
+  </view>
+  <view class="cell" bindtap="sets">
+    <template is="urlMine" data="{{url:'set',text:'设置'}}"></template>
+  </view>
+  <view class="cell" bindtap="about">
+    <template is="urlMine" data="{{url:'about',text:'版本信息'}}"></template>
+  </view>
+</view>

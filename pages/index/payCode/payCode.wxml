@@ -1,0 +1,34 @@
+<!--payCode.wxml-->
+<import src="../../../common/tpl.wxml" />
+<view class="pay">
+  <view class="center">
+    <view class="pay_title">
+      <view bindtap="">
+        <image class="logo" src="../../../image/ETH.png"></image>
+      </view>
+      <view>
+        <text>{{mywallet.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="">
+    <canvas class="code" canvas-id="mycanvas" />
+  </view>
+  <view class="center">
+     <!-- <text>扫一扫转账</text>   -->
+  </view>
+
+  <view class="address ">
+    <view class="wd hidden">
+      <text selectable="{{true}}" style="width:300rpx;" class="">地址：{{mywallet.address}}</text>
+    </view>
+    <view class="btn center mt">
+      <!-- <template is="btnPlain" data="{{text:'复制链接转账'}}"></template> -->
+      <button bindtap="copyaddress" type="primary" style="border-color: #3399ff; color:#3399ff" plain='{{true}}' size="mini">复制账户地址转账</button>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="input-row">
+  <canvas style="width: 686rpx;height: 686rpx;background:white;" canvas-id="mycanvas" />
+</view> -->

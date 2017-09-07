@@ -1,0 +1,46 @@
+.wrap{
+  margin-top: 20rpx;
+}
+.flex{
+  flex-direction: column;
+}
+.flex_item{
+  /* flex-direction: column; */
+}
+.color{
+  color: grey;
+  font-size: 30rpx;
+}
+.logo{
+  width:50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+.tr{
+  text-align: right;
+}
+.ml{
+  margin-left: 200rpx;
+}
+.mt{
+  margin-top: 20rpx;
+}
+.txbj{
+  width:400rpx;
+  height: 400rpx;
+}
+.txheader{
+  background-color: white;
+}
+.omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:200rpx;
+}
+.unshow{
+  display: none
+}
+.show{
+  display: block;
+}

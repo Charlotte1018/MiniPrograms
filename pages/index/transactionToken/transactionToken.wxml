@@ -1,0 +1,89 @@
+<!--transactionToken.wxml-->
+<!-- <import src="../../common/tpl.wxml" /> -->
+
+<view class="txheader">
+  <view class="txbj white">
+    <view class="balance">
+      <text class="">{{balance}}</text>
+    </view>
+    <view class="eth">
+      <text class="eth">{{tokenName}}</text>
+    </view>
+  </view>
+  <view class="center ">
+    <!-- <image class="txbj" src="../../../image/bj_balance.png"></image> -->
+    <view class="inline">
+      <view class="btn1">
+        <button bindtap="transfer" style="color: #3399ff; border-color: #3399ff;" plain size="mini">转账</button>
+      </view>
+      <view class="btn2">
+        <button bindtap="paycode" style="color: #3399ff; border-color: #3399ff;" plain size="mini">收款</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="kind-list-item" wx:if="{{hashequal}}">
+  <view class="kind-list-item-hd">
+    <image class="logo {{tmptokenTrans.icon?'show':'unshow'}}" src="../../../image/to.png"></image>
+    <image class="logo {{tmptokenTrans.icon?'unshow':'show'}}" src="../../../image/in.png"></image>
+    <!-- <image class="logo" src="{{item.icon?'../../image/to.png':'../../image/in.png'}}"></image>  -->
+    <!-- <view class="kind-list-text">token</view> -->
+    <view class=" left">
+      <view class=" omit">
+        <text>{{tmptokenTrans.from}}</text>
+      </view>
+      <view class=" color ">
+        <text>{{timeStamp}}</text>
+      </view>
+    </view>
+    <view class=" right">
+      <view class="" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+        <text>{{tmptokenTrans.value}}  {{tokenName}}</text>
+      </view>
+      <view class=" color tr">
+        <!-- <text>ether</text> -->
+        <text>{{tmptokenTrans.status}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:for="{{Txinfo}}">
+  <view class="wrap" bindtap="transaction" data-index="{{index}}" data-tokenName="{{tokenName}}" data-tokenkey="{{tokenkey}}">
+    <view class="kind-list-item">
+      <view class="kind-list-item-hd">
+        <image class="logo {{item.icon?'show':'unshow'}}" src="../../../image/to.png"></image>
+        <image class="logo {{item.icon?'unshow':'show'}}" src="../../../image/in.png"></image>
+        <!-- <image class="logo" src="{{item.icon?'../../image/to.png':'../../image/in.png'}}"></image>  -->
+        <!-- <view class="kind-list-text">token</view> -->
+        <view class=" left">
+          <view class="flex_item omit">
+            <text>{{item.from}}</text>
+          </view>
+          <view class=" color ">
+            <text>{{item.timeStamp}}</text>
+          </view>
+        </view>
+        <view class=" right">
+          <view class="">
+            <text>{{item.number}}</text>
+          </view>
+          <view class=" color tr">
+            <text>{{tokenName}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex" wx:if="{{item.confirmations<12}}">
+        <view class="flex_item mt">
+          <progress percent="{{item.confirmations/12*100}}" activeColor="#3399ff" />
+        </view>
+        <view class="" style="font-size:28rpx;">
+          <text>{{item.confirmations}}/12</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

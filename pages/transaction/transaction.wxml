@@ -1,0 +1,68 @@
+<import src="../../common/tpl.wxml" />
+
+<view class="txheader">
+  <view class="center ">
+    <image class="txbj" src="../../image/bj_balance.png"></image>
+  </view>
+</view>
+
+<view wx:for="{{Txinfo}}">
+  <view class="wrap">
+    <view class="kind-list-item">
+      <view class="kind-list-item-hd">
+         <!-- <image class="logo {{to?'show':'unshow'}}" src="../../image/to.png"></image> -->
+        <!-- <image class="logo {{inn?'show':'unshow'}}" src="../../image/in.png"></image>  -->
+        <!-- <image class="logo" src="{{to?'../../image/to.png':'../../image/in.png'}}"></image> -->
+        <!-- <view class="kind-list-text">token</view> -->
+        <view class="flex">
+          <view class="flex_item">
+            <text>ETH</text>
+          </view>
+          <view class="flex_item color omit">
+            <text>{{item.from}}</text>
+          </view>
+        </view>
+        <view class="flex tr ml">
+          <view class="flex_item">
+            <text>{{item.value}}</text>
+          </view>
+          <view class="flex_item color">
+            <text>{{item.timeStamp}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+<view class="wrap unshow">
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <image class="logo" src="../../image/in.png"></image>
+      <!-- <view class="kind-list-text">token</view> -->
+      <view class="flex">
+        <view class="flex_item">
+          <text>ETH</text>
+        </view>
+        <view class="flex_item color">
+          <text>0x32784dsf7387</text>
+        </view>
+      </view>
+      <view class="flex tr ml">
+        <view class="flex_item">
+          <text>+$200</text>
+        </view>
+        <view class="flex_item color">
+          <text>08-10 13:45</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

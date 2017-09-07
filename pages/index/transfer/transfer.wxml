@@ -1,0 +1,71 @@
+<!--transfer.wxml-->
+<form bindsubmit="submit" bindreset="reset">
+  <view class="header">
+    <view class="page-section">
+      <view class="txt_sm">地址：</view>
+      <view class="cell {{open ? 'cell_hl' : ''}}">
+        <input class="weui-input" name="to" placeholder="请输入转账地址" value="{{address}}" bindfocus="highLight" bindblur="cancle_hl" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="txt_sm">转账金额：</view>
+      <view class="cell {{open2 ? 'cell_hl' : ''}}">
+        <input value='{{value}}' class="weui-input" name="value" focus='{{true}}' placeholder="请输入转账金额" type="digit" bindfocus="highLight2" bindblur="cancle_hl2" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="txt_sm">密码：</view>
+      <view class="cell {{open5 ? 'cell_hl' : ''}}">
+        <input value='{{password}}' class="weui-input" name="password"  password="{{true}}" placeholder="请输入密码" bindfocus="highLight5" bindblur="cancle_hl5" />
+      </view>
+    </view>
+     <view class="page-section">
+      <view class="txt_sm">请选择币种：</view>
+      <view class="">
+        <picker mode="selector" name="token" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="mt">{{array[index]}}</view>
+           <!-- <view class="navigator-arrow"></view>          -->
+        </picker>
+      </view>
+    </view> 
+    
+  </view>
+  <view class="mt right">
+  <switch bindchange="switchChange" color="#3399ff"/>
+  <text>高级选项</text>
+  </view>
+  <view class="flex mt {{switchs?'show':'unshow'}}">
+    <view class="flex_item mt">
+      <view class="page-section">
+        <view class="txt_sm">gas单价：</view>
+        <view class="cell {{open3 ? 'cell_hl' : ''}}">
+          <input class="weui-input" name="gasPrice" type="digit" placeholder="" value="20" bindfocus="highLight3" bindblur="cancle_hl3" />
+        </view>
+      </view>
+    </view>
+    <view class="flex_item mt">
+      <view class="page-section">
+        <view class="txt_sm">gas数量：</view>
+        <view class="cell {{open4 ? 'cell_hl' : ''}}">
+          <input class="weui-input" name="gasLimit" type="digit" placeholder="" value="65535" bindfocus="highLight4" bindblur="cancle_hl4" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="">
+    <!-- <view class="page-section">
+      <view class="txt_sm">密码：</view>
+      <view class="cell {{open ? 'cell_hl' : ''}}">
+        <input class="weui-input" name="password"  password="{{true}}" placeholder="请输入密码" value="" bindfocus="highLight" bindblur="cancle_hl" />
+      </view>
+    </view> -->
+    <view class="btn mt">
+      <button style="color: #3399ff; border-color: #3399ff;" plain form-type="submit">确认转账</button>
+    </view>
+    <!-- <view class="btn2">
+      <button style="color: #3399ff; border-color: #3399ff;" plain form-type="reset">重置</button>
+    </view> -->
+  </view>
+
+  
+</form>

@@ -1,0 +1,63 @@
+/* payCode.wxss */
+.pay{
+  height: 1170rpx;
+  width: 710rpx;
+  margin-left:20rpx;
+  margin-top:20rpx;
+  background-color: white;
+}
+.pay_title{
+  display: inline-block;
+  /* border: 1rpx solid grey; */
+   text-align: center; 
+   margin-top: 50rpx;
+}
+.logo{
+  width: 70rpx;
+  height: 70rpx;
+  /* border: 1rpx solid grey; */
+  /* margin-bottom: 10rpx; */
+}
+.ml{
+  margin-left: 120rpx;
+}
+.mt{
+  margin-top: 50rpx;
+}
+.code{
+  margin-left:70rpx;
+  width: 686rpx;
+  height: 686rpx;
+  background:white;
+}
+.address{
+  /* text-align: center; */
+}
+.btn{
+  width:50%;
+  margin-left: 180rpx;
+}
+.wd{
+  width: 600rpx;
+  margin-left: 50rpx;
+}
+.hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.input-row{
+    margin: 30rpx auto;
+    border-bottom: 1rpx solid #e5e5e5;
+    border-top: 1rpx solid #e5e5e5;
+    /* display: flex; */
+    align-items: center;
+    height: 88rpx;
+    padding: 0 32rpx; 
+    background-color: #fff;
+    font-size: 34rpx;
+    color: #000
+}
+.center{
+  text-align: center;
+}

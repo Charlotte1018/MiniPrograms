@@ -1,0 +1,13 @@
+/* we.wxss */
+.we{
+    width:90%;
+    margin:10rpx auto;
+}
+image{
+    display: block;
+    width:100%;
+    margin-bottom: 20rpx;
+}
+.text{
+    text-indent: 30px;
+}

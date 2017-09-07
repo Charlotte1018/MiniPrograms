@@ -1,0 +1,8 @@
+<view class="import">
+  <view class="import_item">
+    <text>以太宝支持官方钱包、助记词和私钥这3种类型钱包账户的导入。</text>
+  </view>
+   <view class="import_item">
+    <text>用户可在 app 中进入【我】页面，点击【管理钱包】，再点击【导入钱包】按钮，根据提示完成导入即可。</text>
+  </view>
+</view>

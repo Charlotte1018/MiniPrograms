@@ -1,0 +1,15 @@
+<!--set.wxml-->
+<view class="box mt bg">
+  <view class="" bindtap="">
+    <view class="navigator">
+      <text class="navigator-text" style="margin-left:40rpx;">多语言</text>
+      <view class="navigator-arrow"></view>
+    </view>
+  </view>
+  <view class="cell" bindtap="">
+    <view class="navigator">
+      <text class="navigator-text" style="margin-left:40rpx;">货币单位</text>
+      <view class="navigator-arrow"></view>
+    </view>
+  </view>
+</view>

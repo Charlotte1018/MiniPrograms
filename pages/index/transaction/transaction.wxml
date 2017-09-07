@@ -1,0 +1,132 @@
+<import src="../../../common/tpl.wxml" />
+
+<view class="txheader">
+  <view class="txbj white">
+    <view class="balance">
+      <text class="">{{ETH}}</text>
+    </view>
+    <view class="eth">
+      <text class="eth">ETH</text>
+    </view>
+  </view>
+  <view class="center ">
+    <!-- <image class="txbj" src="../../../image/bj_balance.png"></image> -->
+    <!-- <view class="txbj white">
+      <text class="balance">32</text>
+      <text class="eth">ETH</text>
+    </view> -->
+    <view class="inline">
+      <view class="btn1">
+        <button bindtap="transfer" hover-class='' style="color: #3399ff; border-color: #3399ff;" plain size="mini">转账</button>
+      </view>
+      <view class="btn2">
+        <button bindtap="paycode" style="color: #3399ff; border-color: #3399ff;" plain size="mini">收款</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="kind-list-item" wx:if="{{hashequal}}">
+  <view class="kind-list-item-hd">
+    <image class="logo {{tmpTrans.icon?'show':'unshow'}}" src="../../../image/to.png"></image>
+    <image class="logo {{tmpTrans.icon?'unshow':'show'}}" src="../../../image/in.png"></image>
+    <!-- <image class="logo" src="{{item.icon?'../../image/to.png':'../../image/in.png'}}"></image>  -->
+    <!-- <view class="kind-list-text">token</view> -->
+    <view class=" left">
+      <view class=" omit">
+        <text>{{tmpTrans.from}}</text>
+      </view>
+      <view class=" color ">
+        <text>{{timeStamp}}</text>
+      </view>
+    </view>
+    <view class=" right">
+      <view class="" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+        <text>{{tmpTrans.value}}  ether</text>
+      </view>
+      <view class=" color tr">
+        <!-- <text>ether</text> -->
+        <text>{{tmpTrans.status}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="flex" >
+    <view class="flex_item mt">
+      <progress percent="0" activeColor="#3399ff" />
+    </view>
+    <view class="" style="font-size:28rpx;">
+      <text>0/12</text>
+    </view>
+  </view>
+</view>
+
+<view wx:for="{{Txinfo}}" wx:key="hash">
+  <view class="wrap" bindtap="transaction" data-index="{{index}}">
+    <view class="kind-list-item">
+      <view class="kind-list-item-hd">
+        <image class="logo {{item.icon?'show':'unshow'}}" src="../../../image/to.png"></image>
+        <image class="logo {{item.icon?'unshow':'show'}}" src="../../../image/in.png"></image>
+        <!-- <image class="logo" src="{{item.icon?'../../image/to.png':'../../image/in.png'}}"></image>  -->
+        <!-- <view class="kind-list-text">token</view> -->
+        <view class=" left">
+          <view class=" omit">
+            <text>{{item.from}}</text>
+          </view>
+          <view class=" color ">
+            <text>{{item.timeStamp}}</text>
+          </view>
+        </view>
+        <view class=" right">
+          <view class="" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+            <text>{{item.value}}</text>
+          </view>
+          <view class=" color tr">
+            <text>ether</text>
+          </view>
+        </view>
+      </view>
+
+
+      <view class="flex" wx:if="{{item.confirmations<12}}">
+        <view class="flex_item mt">
+          <progress percent="{{item.confirmations/12*100}}" activeColor="#3399ff" />
+        </view>
+        <view class="" style="font-size:28rpx;">
+          <text>{{item.confirmations}}/12</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+<view class="wrap unshow">
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <image class="logo" src="../../../image/in.png"></image>
+      <!-- <view class="kind-list-text">token</view> -->
+      <view class="flex">
+        <view class="flex_item">
+          <text>ETH</text>
+        </view>
+        <view class="flex_item color">
+          <text>0x32784dsf7387</text>
+        </view>
+      </view>
+      <view class="flex tr ml">
+        <view class="flex_item">
+          <text>+$200</text>
+        </view>
+        <view class="flex_item color">
+          <text>08-10 13:45</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,136 @@
+<!--index.wxml-->
+<import src="../../common/tpl.wxml" />
+<view class="">
+  <view class="header">
+    <template is="logo" data="{{logoUrl:'../../image/scan.png',text:'扫一扫',bindtap:'scan'}}"></template>
+    <template is="logo" data="{{logoUrl:'../../image/pay.png',text:'付款码',bindtap:'payCode'}}"></template>
+    <template is="logo" data="{{logoUrl:'../../image/wallet.png',text:'钱包',bindtap:'wallet'}}"></template>
+  </view>
+<view><text></text></view>
+
+
+  <view class="{{show?'show':'unshow'}}">
+    <view class="">
+      <view class="kind-list-item-hd">
+        <view class="inline">
+          <view class="kind-list-text txt">结余:</view>
+          <view class="kind-list-text">¥{{ethCH+cpcCH}}</view>
+        </view>
+        <!-- <view class="fr btn_m" bindtap="transfer">
+          <template is="btnPlain" data="{{text:'转账'}}"></template>
+        </view> -->
+        <!-- <view class="" bindtap="asset">
+        <image class="add" src="../../image/add.png"></image>
+      </view> -->
+      </view>
+    </view>
+
+
+    <view class="cardList" name='cardList'>
+      <view class="" bindtap="transactioninfo">
+        <view class="kind-list-item">
+          <view class="kind-list-item-hd">
+            <image class="logo" src="../../image/ETH.png"></image>
+            <view class="kind-list-text">Balance</view>
+            <view class="flex right">
+              <view class="flex_item">
+                <text value="0">{{ethBL}}</text>
+              </view>
+              <view class="flex_item color">
+                <text value="0">≈¥{{ethCH}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="" bindtap="actTrans">
+        <view class="kind-list-item">
+          <view class="kind-list-item-hd">
+            <image class="logo" src="../../image/ACT.png"></image>
+            <view class="kind-list-text">ACT</view>
+            <view class="flex right">
+              <view class="flex_item ">
+                <text value="0">{{myACT.value}}</text>
+              </view>
+              <view class="flex_item color">
+                <text value="0">≈¥{{myACT.value}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view> -->
+      <!-- <view class="{{VHT?'show':'unshow'}}" bindtap="qtumTrans">
+         <template is="card" data="{{token:'VHT',balance:'0.987'}}"></template> 
+        <view class="kind-list-item">
+          <view class="kind-list-item-hd">
+            <image class="logo" src="https://www.aethercoder.com:3000/{{Token[0].icon}}"></image>
+            <view class="kind-list-text">{{Token[0].name}}</view>
+            <view class="flex right">
+              <view class="flex_item ">
+                <text value="0">{{qtum.value}}</text>
+              </view>
+              <view class="flex_item color">
+                <text value="0">≈¥{{qtumCH}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view> -->
+      <!-- <view class="" hidden="{{false}}">
+      <template is="card" data="{{token:'ETH',balance:'0.9dddd87'}}"></template>
+    </view> -->
+      <view class="{{VHT?'show':'unshow'}}" bindtap="cpcTrans">
+        <!-- <template is="card" data="{{token:'ACT',balance:'48.7'}}"></template> -->
+        <view class="kind-list-item">
+          <view class="kind-list-item-hd">
+            <image class="logo" src="https://www.aethercoder.com:3000/{{Token[0].icon}}"></image>
+            <view class="kind-list-text">{{Token[0].name}}</view>
+            <view class="flex right">
+              <view class="flex_item ">
+                <text value="0">{{cpc.value}}</text>
+              </view>
+              <view class="flex_item color">
+                <text value="0">≈¥{{cpcCH}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="{{CPCE?'show':'unshow'}}" bindtap="cpceTrans">
+         <template is="card" data="{{token:'CPCE',balance:'3.87'}}"></template> 
+        <view class="kind-list-item">
+          <view class="kind-list-item-hd">
+            <image class="logo" src="https://www.aethercoder.com:3000/images/icon/cpcetest.png"></image>
+            <view class="kind-list-text">CPCE</view>
+            <view class="flex right">
+              <view class="flex_item ">
+                <text value="0">{{myCPCE.value}}</text>
+              </view>
+              <view class="flex_item color">
+                <text value="0">≈¥{{cpceCH}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view> -->
+    </view>
+    <view class="btn" bindtap="asset">
+    <button class="btnclass" style="color: #3399ff; border-color: #3399ff;" hover-class='btn-hover' plain>导入资产</button>
+      <!-- <template is="btnPlain" data="{{text:'导入资产'}}"></template> -->
+    </view>
+  </view>
+  <!-- <view class="btn" bindtap="asset">
+    <template is="btnPlain" data="{{text:'导入资产'}}"></template>
+  </view> -->
+  <view class="btn" bindtap="createWallet">
+    <template is="btnPlain" data="{{text:'创建钱包'}}"></template>
+  </view>
+  <view class="btn" bindtap="inputWallet">
+    <template is="btnPlain" data="{{text:'导入钱包'}}"></template>
+  </view>
+  <!--<view class="btn show" bindtap="test">-->
+    <!--<template is="btnPlain" data="{{text:'测试'}}"></template>-->
+  <!--</view> -->
+
+
+</view>

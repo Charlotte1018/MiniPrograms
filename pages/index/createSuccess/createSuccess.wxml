@@ -1,0 +1,22 @@
+<!--createSuccess.wxml-->
+<import src="../../../common/tpl.wxml" />
+<view class="icon">
+  <!-- <icon type="success" size="60" color="#3399ff"/> -->
+  <text >{{h1}}</text>
+  
+</view>
+<view class="center">
+<image class="wallet" src="../../../image/walletSuccess.png"></image></view>
+<view class="txt">
+  <text>注意：请在使用钱包之前先备份好您的钱包，方法有导出keystone文件。</text>
+</view>
+<view class="btn" bindtap="copy">
+  <template is="btnPlain" data="{{text:'备份钱包'}}"></template>
+</view>
+<modal hidden="{{hiddenmodalput}}" data-index="{{index}}" title="请输入密码" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <input name="password" type='text' password='{{true}}' bindinput="passWdInput" placeholder="请输入密码"/>
+</modal>
+<view class="tip">
+  <text bindtap="copyTip">如何备份钱包？</text>
+</view>
+<!-- <template is="btn" data="{{text:'备份钱包'}}"></template> -->

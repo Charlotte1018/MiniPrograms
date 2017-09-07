@@ -1,0 +1,53 @@
+<!--transferFail.wxml-->
+<!--transferSuccess.wxml-->
+<view class="">
+  <view class="status">
+    <image class="icon" src="../../../../image/icon_fail.png"></image>
+    <view class="txt">
+      <text>交易失败</text>
+    </view>
+    <view class="">
+       <text>{{value}}</text> 
+    </view>
+  </view>
+</view>
+
+
+<view class="status_body">
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd grey border">
+      <view class="left">
+        <text>交易币种:</text>
+      </view>
+      <view class="omit right">
+        <text>{{kind}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd grey border">
+      <view class="left">
+        <text>from:</text>
+      </view>
+      <view class="omit right">
+        <text>{{mywallet.address}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd grey border">
+      <view class="left">
+        <text>to:</text>
+      </view>
+      <view class="omit right">
+        <text>{{to}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="btn" bindtap="reason" data-message="{{message}}">
+  <button style="color: #3399ff; border-color: #3399ff;" plain>查看原因</button>
+</view>

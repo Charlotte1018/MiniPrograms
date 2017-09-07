@@ -1,0 +1,23 @@
+<!--feedback.wxml-->
+<view class="title mt">
+  <text>我们表现如何？</text>
+</view>
+<view class="p mt">
+  <text>我们想了解您喜欢哪些方面，以及您认为我们可以在哪些方面做的更好，我们的成功离不开您的支持！</text>
+</view>
+<form bindsubmit="submit" bindreset="reset" class="">
+  <view class="mt">
+    <textarea class="section" auto-focus placeholder="请输入您的宝贵意见..." />
+  </view>
+  <view class="btn mt">
+    <button style="color: #3399ff; border-color: #3399ff;" form-type="submit" plain size="mini">提交意见</button>
+  </view>
+  <view class="btn">
+    <button style="color: #3399ff; border-color: #3399ff;" form-type="reset" plain size="mini">重置意见</button>
+  </view>
+</form>
+
+
+<template name="btn">
+  <button style="color: white; background-color: #3399ff;border-bottom-style:outset;border-bottom-color:#F0F8FF;" type="primary">{{text}}</button>
+</template>

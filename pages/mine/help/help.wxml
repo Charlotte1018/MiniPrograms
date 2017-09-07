@@ -1,0 +1,15 @@
+
+<view class="box mt bg">
+  <view class="" bindtap="cash">
+    <view class="navigator">
+      <text class="navigator-text" style="margin-left:40rpx;">1.导入钱包开启方法</text>
+      <view class="navigator-arrow"></view>
+    </view>
+  </view>
+  <view class="cell" bindtap="copy">
+    <view class="navigator">
+      <text class="navigator-text" style="margin-left:40rpx;">2.备份钱包开启方法</text>
+      <view class="navigator-arrow"></view>
+    </view>
+  </view>
+</view>

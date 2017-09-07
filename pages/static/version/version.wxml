@@ -1,0 +1,9 @@
+<!--version.wxml-->
+<view>
+    <view class="h2" wx:for="{{version}}" wx:key = "title">
+        <text class="text">{{item.title}}</text>
+        <view wx:for="{{item.item}}" wx:key="*this">
+            <view class="item">{{item}}</view>
+        </view>
+    </view>
+</view>

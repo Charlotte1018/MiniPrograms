@@ -1,0 +1,45 @@
+.header{
+  width:100%;
+  height: 400rpx;
+    background-image: url('https://www.aethercoder.com:3000/images/bg.png');  
+  /* background-color: #333333; */
+}
+.img{
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: 10rpx;
+}
+.box{
+  background-color: white;
+  /* margin-top: 30rpx; */
+}
+.cell{
+  border-top: 1rpx solid #D9D8D8;
+   width: 710rpx; 
+   margin-left: 20rpx; 
+}
+.img_bg{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 70rpx;
+  margin-top: 70rpx;
+}
+.txt{
+  color: white;
+  margin-left: 50rpx;
+  margin-top: 100rpx;
+}
+.white{
+  color: white;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.wallet{
+  margin-left: 250rpx;
+}
+.hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 650rpx;
+}

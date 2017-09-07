@@ -1,0 +1,10 @@
+.swiper_box{
+  width: 100%;
+  height: 400rpx;
+  text-align: center;
+  /* border: 1rpx solid black; */
+}
+.slide-image{
+  width:750rpx;
+  height: 400rpx;
+}

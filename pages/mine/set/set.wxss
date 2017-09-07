@@ -1,0 +1,16 @@
+/* set.wxss */
+.position {
+  display: inline-block;
+  text-align: center;
+  margin-top: 50rpx;
+  margin-left: 250rpx;
+}
+.mt{
+  margin-top: 40rpx;
+}
+.cell{
+  border-top: 1rpx solid #D9D8D8;
+}
+.bg{
+  background-color: white;
+}

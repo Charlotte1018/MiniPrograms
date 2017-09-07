@@ -1,0 +1,161 @@
+<!--inputWallet.wxml-->
+<view class="tabIn">
+    <view data-current="0" bindtap="swichNav" class="tab_item">
+        <view>
+            <image src="{{currentTab==0 ? '../../../image/icon_Import_highlight@2x.png': '../../../image/icon_Import_normal@2x.png'}}"></image>
+        </view>
+        <view class="{{currentTab==0 ? 'blue' : ''}} pb">
+            导入钱包
+        </view>
+    </view>
+    <view class="tab_item" data-current="1" bindtap="swichNav">
+        <view>
+            <image src="{{currentTab==1 ? '../../../image/icon_Mnemonic-word_highlight@2x.png' : '../../../image/icon_Mnemonic-word_normal@2x.png'}}"></image>
+        </view>
+        <view class="{{currentTab==1 ? 'blue' : ''}} pb">
+            助记词
+        </view>
+    </view>
+    <view class="tab_item" data-current="2" bindtap="swichNav">
+        <view>
+            <image src="{{currentTab==2 ? '../../../image/icon_private-key_highlight@2x.png':'../../../image/icon_private-key_normal@2x.png'}}"></image>
+        </view>
+        <view class="{{currentTab==2 ? 'blue' : ''}} pb">
+            私钥
+        </view>
+    </view>
+    <!--<view class="tab_item" data-current="3" bindtap="swichNav">-->
+        <!--<view>-->
+            <!--<image src="{{currentTab == 3 ? '../../../image/icon_observation_highlight@2x.png':'../../../image/icon_observation_highlight@2x.png'}}"></image>-->
+        <!--</view>-->
+        <!--<view class="{{currentTab==3 ? 'blue' : ''}} pb">-->
+            <!--<text>观察钱包</text>-->
+        <!--</view>-->
+    <!--</view>-->
+</view>
+<view current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px">
+    <view class="{{currentTab == 0 ? 'show' : 'unshow'}}">
+        <form bindsubmit="submit" bindreset="reset">
+            <view class="" name='keystore'>
+                <view class="instruction">
+                    直接复制粘贴以太坊官方钱包keystore文件内容至输入框。
+                </view>
+                <view class="section">
+                    <textarea value='{{null}}' maxlength='-1' placeholder="输入keystore" fixed="{{tag}}" name="keystore" cursor="1" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+            <view class="" name='keyhelp'>
+                <view class="password">
+                    <input value="{{null}}" name="password" type="password" placeholder="keystore 密码" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+
+            <view class="" name='keyprivate'>
+                <view class="btn center mt">
+                    <button form-type="submit" disabled="{{disabled}}" bindtap="primary"  plain style="border-color:#3399ff;color:#3399ff;width:50%;margin:0 auto;">
+                        开始导入
+                    </button>
+                </view>
+                <view class="cash">
+                    <text bindtap="import">如何导入钱包？</text>
+                </view>
+            </view>
+        </form>
+    </view>
+    <!-- 我是助记词 -->
+    <view class="{{currentTab == 1 ? 'show' : 'unshow'}}">
+        <form bindsubmit="submit_two" bindreset="reset">
+            <view class="" name='keystore' style="margin-top:60rpx;">
+                <view class="section">
+                    <textarea value='{{null}}' cursor="1" maxlength='-1' placeholder="请填写助记词" name="memory" fixed="{{tag}}" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+            <view class="pickerwarp">
+                <picker bindchange="bindPickerChange" name="token" value="{{index}}" range="{{array}}">
+                    <view class="picker">
+                        当前选择：{{array[index]}}
+                    </view>
+                </picker>
+            </view>
+            <view class="" name='keyhelp'>
+                <view class="password">
+                    <input value='{{null}}' password type="text" bindinput="passWdInput" name="password" placeholder="重置keystore密码" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+            <view class="" name='keyhelp'>
+                <view class="password">
+                    <input value='{{null}}' password type="text" bindinput="passWdInput" name="confirm" placeholder="确认密码" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+            <view class="" name='keyhelp'>
+                <view class="password">
+                    <input value='{{null}}' password type="text" bindinput="passWdInput" placeholder="密码提示信息（可不填）" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+
+            <view class="" name='keyprivate'>
+                <view class="btn center mt">
+                    <button form-type="submit" disabled="{{disabled}}" bindtap="primary"  plain style="border-color:#3399ff;color:#3399ff;width:50%;margin:0 auto;">
+                        开始导入
+                    </button>
+                </view>
+            </view>
+        </form>
+    </view>
+    <!-- 我是私钥-->
+    <view class="{{currentTab == 2 ? 'show' : 'unshow'}}">
+        <form bindsubmit="submit_three" bindreset="reset" class="mt">
+            <view style="margin-top: 30px;">
+                <view class="password ">
+                    <input value='{{null}}' name="private_key" type="text" placeholder="填写私钥" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+
+            <view>
+                <view class="password">
+                    <input value='{{null}}' password name="password" type="text" placeholder="重置keystore密码" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+
+            <view>
+                <view class="password">
+                    <input value='{{null}}' password name="confirm" type="text" placeholder="确认密码" placeholder-class="from-palceholder"/>
+                </view>
+            </view>
+
+            <view class="" name='keyprivate'>
+                <view class="btn center mt">
+                    <button  form-type="submit" disabled="{{disabled}}" plain bindtap="primary" style="border-color:#3399ff;color:#3399ff;width:50%;margin:0 auto;">
+                        开始导入
+                    </button>
+                </view>
+            </view>
+        </form>
+    </view>
+    <!--<view class="{{currentTab == 3 ? 'show' : 'unshow'}}">-->
+        <!--<form bindsubmit="submit_four" bindreset="reset">-->
+            <!--<view class="instruction">-->
+                <!--<text>观察钱包不需要导入私钥，只需导入钱包地址。进行日常查看账户、交易和接受通知。大量金额的私钥建议使用冷钱包或者软件钱包管理，避免泄露被盗。</text>-->
+            <!--</view>-->
+
+            <!--<view>-->
+                <!--<view class="password">-->
+                    <!--<input password type="text" placeholder="扫码或输入钱包地址" placeholder-class="from-palceholder"/>-->
+                <!--</view>-->
+            <!--</view>-->
+
+            <!--<view class="btn center mt">-->
+                <!--<button  type="primary" disabled="{{disabled}}" plain bindtap="primary" style="border-color:#3399ff;color:#3399ff;width:50%;margin:0 auto;">-->
+                    <!--开始导入-->
+                <!--</button>-->
+            <!--</view>-->
+
+            <!--<view class="warning">-->
+                <!--<text>注意：观察钱包发送交易时需要冷钱包配合签名，您可以使用另外一台闲置手机开启飞行模式作为冷钱包，导入钱包私钥。配合离线签名。</text>-->
+            <!--</view>-->
+        <!--</form>-->
+    <!--</view>-->
+</view>
+
+
+

@@ -1,0 +1,13 @@
+/* version.wxss */
+.h2{
+    margin:30rpx ;
+}
+.text{
+    font-size: 35rpx;
+    color:black;
+    font-weight: bold;
+}
+.item{
+    text-indent: 20rpx;
+    color: #666666;
+}

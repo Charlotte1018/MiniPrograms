@@ -1,0 +1,62 @@
+<template name="logo">
+  <view class="position">
+        <view bindtap="{{bindtap}}">
+          <image class="logo" src="{{logoUrl}}"></image>
+        </view>
+        <view>
+          <text>{{text}}</text>
+        </view>
+      </view>
+</template>
+
+<template name="btnPlain">
+  <button class="btnclass" style="color: #3399ff; border-color: #3399ff;" plain>{{text}}</button>
+  <!-- <button class="btnclass" style="color: #3399ff; border-color: #3399ff;" plain>{{text}}</button> -->
+</template>
+<template name="btn">
+  <button style="color: white; background-color: #3399ff;border-bottom-style:outset;border-bottom-color:#F0F8FF;" type="primary">{{text}}</button>
+</template>
+
+<template name="card">
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <image class="logo" src="../../image/{{token}}.png"></image>
+      <view class="kind-list-text">{{token}}</view>
+      <view>{{balance}}</view>
+    </view>
+  </view>
+</template>
+<template name="wallet">
+  <view class="kind-list-item cell">
+    <view class="kind-list-item-hd">
+      <image class="logo" src="../../../image/{{token}}.png"></image>
+      <view class="kind-list-text">{{address}}</view>
+      <view class="red">{{copy}}</view>
+      <image class="ok" src="../../../image/{{ok}}.png"></image>
+    </view>
+  </view>
+</template>
+<template name="asset">
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <image class="logo" src="../../../image/{{token}}.png"></image>
+      <view class="kind-list-text">{{token}}</view>
+      <switch checked='{{show}}' bindchange='{{token}}' />
+    </view>
+  </view>
+</template>
+
+<template name="urlWallet">
+  <navigator url="{{url}}" class="navigator">
+      <view class="navigator-text txt">{{text}}</view>
+      <view class="navigator-arrow"></view>
+  </navigator>
+</template>
+
+<template name="urlMine">
+  <view class="navigator">
+    <image class="img" src="../../image/{{url}}.png"></image>
+    <text class="navigator-text" style="margin-left:40rpx;">{{text}}</text>
+    <view class="navigator-arrow"></view> 
+  </view>
+</template>

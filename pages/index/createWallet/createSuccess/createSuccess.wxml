@@ -1,0 +1,15 @@
+<!--createSuccess.wxml-->
+<import src="../../../../common/tpl.wxml" />
+<view class="icon">
+  <icon type="success" size="60" color="#3399ff"/>
+</view>
+<view class="txt">
+  <text>注意：请在使用钱包之前先备份好您的钱包，方法有导出keystone文件或者导出助记词。</text>
+</view>
+<view class="btn">
+  <template is="btn" data="{{text:'备份钱包'}}"></template>
+</view>
+<view class="tip">
+  <text>如何备份钱包....？</text>
+</view>
+<!-- <template is="btn" data="{{text:'备份钱包'}}"></template> -->

@@ -1,0 +1,84 @@
+/**index.wxss**/
+.header{
+  width:750rpx;
+  height:300rpx;
+  background-color: white;
+}
+.logo{
+  width:100rpx;
+  height:100rpx;
+}
+.position{
+  display: inline-block;
+  text-align: center;
+  margin-top: 60rpx;
+  margin-left: 110rpx;
+  margin-right: 10rpx;
+}
+.cardList{
+  width:710rpx;
+  margin-left: 20rpx;
+}
+.inline{
+  display: inline-block;
+  text-align: center;
+  width:200rpx;
+}
+.txt{
+  color: grey;
+}
+.fr{
+  margin-left: 400rpx;
+}
+.btn_m{
+  width: 40%;
+}
+.add{
+  width:50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+}
+
+.img{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 10rpx;
+}
+.btn{
+  width:550rpx;
+  margin-top: 30rpx;
+  margin-left: 100rpx;
+}
+.hidden{
+  width:400rpx;
+  overflow: scroll;
+}
+.flex{
+  flex-direction: column;
+}
+.color{
+  color: grey;
+  font-size: 30rpx;
+}
+.show{
+  display: block;
+}
+.unshow{
+  display: none;
+}
+.right{
+  width:400rpx;
+  text-align:right;
+    /* border:1rpx solid grey;   */
+}
+.left{
+  width:500rpx;
+  text-align:left;
+    /* border:1rpx solid grey;   */
+}
+.btnclass{
+  color: #3399ff; border-color: #3399ff;
+}
+.btnhover{
+  color: white; background-color: #3399ff;border-bottom-style:outset;border-bottom-color:#F0F8FF;
+}

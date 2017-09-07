@@ -1,0 +1,31 @@
+/* feedback.wxss */
+page{
+  background-color: white;
+}
+.title{
+  font-size: 48rpx;
+  text-align: center;
+}
+.p{
+  font-size: 32rpx;
+  width: 600rpx;
+  margin-left:70rpx;
+  text-indent: 6rpx;
+  color: #cccccc;
+}
+.mt{
+  margin-top: 40rpx;
+}
+.section{
+  border:1rpx solid #cccccc;
+  height:500rpx;
+  width:600rpx;
+  margin-left: 70rpx;
+  border-radius: 10rpx;
+  color: grey;
+}
+.btn{
+  text-align: center;
+  width: 200rpx;
+  margin-left: 280rpx;
+}

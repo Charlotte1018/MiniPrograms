@@ -1,0 +1,10 @@
+/* import.wxss */
+.import{
+  width:90%;
+  font-size:35rpx;
+  color: #666;
+  margin:30rpx auto; 
+}
+.import_item{
+  margin: 10rpx auto;
+}

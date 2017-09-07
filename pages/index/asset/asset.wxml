@@ -1,0 +1,37 @@
+<!--asset.wxml-->
+<import src="../../../common/tpl.wxml" />
+<view class="asset">
+  <view class="cardList">
+    <!-- <template is="asset" data="{{token:'ETH',show:'true'}}"></template> -->
+    <view class="kind-list-item">
+      <view class="kind-list-item-hd">
+        <!-- <image class="logo" src="https://www.aethercoder.com:3000/images/icon/qtum.png"></image> -->
+        <image class="logo" src="https://www.aethercoder.com:3000/{{Token[0].icon}}"></image>
+        <view class="kind-list-text">{{Token[0].name}}</view>
+        <switch checked='{{VHT}}' bindchange='VHT' />
+      </view>
+    </view>
+  </view>
+  <!-- <view class="cardList">
+    <view class="kind-list-item">
+      <view class="kind-list-item-hd">
+        <image class="logo" src="https://www.aethercoder.com:3000/{{Token[1].icon}}"></image>
+        <view class="kind-list-text">{{Token[1].name}}</view>
+        <switch checked='{{ACT}}' bindchange='ACT' />
+      </view>
+    </view>
+     <template is="asset" data="{{token:'MKR',show:'MKR'}}"></template> 
+  </view> -->
+  <!-- <view class="cardList">
+    <view class="kind-list-item">
+      <view class="kind-list-item-hd">
+        <image class="logo" src="https://www.aethercoder.com:3000/{{Token[0].icon}}"></image>
+        <view class="kind-list-text">{{Token[0].name}}</view>
+        <switch checked='{{CPCE}}' bindchange='CPCE' />
+      </view>
+    </view>
+     <template is="asset" data="{{token:'DGD',show:'DGD'}}"></template> 
+  </view> -->
+
+
+</view>

@@ -1,0 +1,82 @@
+<!--createWallet.wxml-->
+<import src="../../../common/tpl.wxml" />
+
+<template name="creatWallet">
+  <view class="page-section">
+    <view class="txt_sm">{{title}}</view>
+    <view class="cell {{open ? 'cell_hl' : ''}}">
+      <input class="weui-input" placeholder="{{text}}" value="{{address}}" bindfocus="highLight" bindblur="cancle_hl" />
+    </view>
+  </view>
+</template>
+
+<template name="btnPlain">
+  <button style="color: #3399ff; border-color: #3399ff;" plain form-type="submit">{{text}}</button>
+</template>
+
+<view class="body">
+  <view class="header">
+    <form bindsubmit="submit" bindreset="reset">
+      <view class="page-section">
+      <view class="txt_sm">钱包名称：</view>
+      <view class="cell {{open ? 'cell_hl' : ''}}">
+        <input value='{{name}}' class="weui-input" placeholder="输入钱包名称" name="name" bindfocus="highLight" bindblur="cancle_hl" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="txt_sm">密码：</view>
+      <view class="cell {{open2 ? 'cell_hl' : ''}}">
+        <input value='{{password}}' class="weui-input" placeholder="输入密码" name="password" password="{{true}}" bindfocus="highLight2" bindblur="cancle_hl2" />
+      </view>
+      <view class="tip" wx:if="{{passworldLength<6}}">
+        <text>至少需要输入6位密码</text>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="txt_sm">确认你的密码：</view>
+      <view class="cell {{open3 ? 'cell_hl' : ''}}">
+        <input value='{{confirm}}' class="weui-input" placeholder="确认密码" name="confirm" password="{{true}}" bindfocus="highLight3" bindblur="cancle_hl3" />
+      </view>
+    </view>
+    <view class="btn">
+      <button style="color: #3399ff; border-color: #3399ff;" plain form-type="submit">创建钱包</button>
+    </view>
+    <!--<view class="btn2">-->
+      <!--<button style="color: #3399ff; border-color: #3399ff;" plain form-type="reset">重置</button>-->
+    <!--</view>-->
+
+    </form>
+  </view>
+</view>
+
+
+
+<!-- <view class="body">
+  <view class="header">
+    <view class="page-section">
+      <view class="txt_sm">钱包名称：</view>
+      <view class="cell {{open ? 'cell_hl' : ''}}">
+        <input class="weui-input" placeholder="输入钱包名称" name="name" bindfocus="highLight" bindblur="cancle_hl" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="txt_sm">密码：</view>
+      <view class="cell {{open2 ? 'cell_hl' : ''}}">
+        <input class="weui-input" placeholder="输入密码" name="password" password="{{true}}" bindfocus="highLight2" bindblur="cancle_hl2" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="txt_sm">确认密码：</view>
+      <view class="cell {{open3 ? 'cell_hl' : ''}}">
+        <input class="weui-input" placeholder="确认密码" name="confirm" password="{{true}}" bindfocus="highLight3" bindblur="cancle_hl3" />
+      </view>
+    </view>
+  </view>
+
+  <view class="btn" bindtap="">
+    <template is="btnPlain" data="{{text:'创建钱包'}}"></template>
+  </view>
+  <view class="btn2" bindtap="">
+    <template is="btnPlain" data="{{text:'导入钱包'}}"></template>
+  </view>
+</view> -->

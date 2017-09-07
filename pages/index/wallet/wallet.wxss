@@ -1,0 +1,71 @@
+/* wallet.wxss */
+
+.cell {
+  border-bottom: 1rpx solid #d9d8d8;
+  margin-top: 10rpx;
+}
+
+.red {
+  color: #3399ff;
+}
+
+.walletList {
+  width: 710rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.header {
+  width: 750rpx;
+  height: 500rpx;
+  /* background-color: white; */
+}
+
+.txt {
+  color: #39f;
+}
+
+.navigator {
+  width: 710rpx;
+  background-color: white;
+  margin-top: 50rpx;
+}
+
+.btn {
+  width: 550rpx;
+  margin-top: 30rpx;
+  margin-left: 100rpx;
+}
+
+.logo {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+
+.ok {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rpx;
+}
+.flex_item{
+  flex:1;
+}
+.name{
+  width:240rpx;
+  
+}
+.address{
+  width:440rpx;
+}

@@ -1,0 +1,93 @@
+<!--transTokendetail.wxml-->
+<!--transDetail.wxml-->
+<view class="detail">
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <view class="left">
+        <text>交易数量</text>
+      </view>
+      <view class="right">
+        <text>{{txinfo.number}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="detail mt">
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <view class="left">
+        <text>交易币种</text>
+      </view>
+      <view class="right">
+        <text>{{tokenName}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item" bindtap="detail">
+    <view class="kind-list-item-hd">
+      <view class="left">
+        <text>订单号</text>
+      </view>
+      <view class="right omit">
+        <text>{{txinfo.hash}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <view class="left">
+        <text>from:</text>
+      </view>
+      <view class="omit right">
+        <text>{{txinfo.from}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <view class="left">
+        <text>to:</text>
+      </view>
+      <view class="omit right">
+        <text>{{txinfo.toAccount}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <view class="left" >
+        <text >时间</text>
+      </view>
+      <view class="right">
+        <text>{{txinfo.timeStamp}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <view class="left">
+        <text>区块数</text>
+      </view>
+      <view class="right">
+        <text>{{txinfo.blockNumber}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="kind-list-item">
+    <view class="kind-list-item-hd">
+      <view class="left">
+        <text>状态</text>
+      </view>
+      <view class="right">
+        <text style="color:#33cc99;">交易成功</text>
+      </view>
+    </view>
+  </view>
+</view>

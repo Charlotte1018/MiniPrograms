@@ -1,0 +1,16 @@
+<!--privacyolicy.wxml-->
+<view class="privacy">
+    <view class="tishi">
+        <text class="title">{{tishi.tishi}}</text>
+        <view class="tishi_item">{{tishi.item1}}</view>
+        <view class="tishi_item">{{tishi.item2}}</view>
+    </view>
+    <view wx:for="{{privacy}}" wx:key="title">
+        <view class="title">
+            {{item.title}}
+        </view>
+        <view class="privacy_item" wx:for="{{item.item}}" wx:key="*this">
+            {{index+1}}. {{item}}
+        </view>
+    </view>
+</view>

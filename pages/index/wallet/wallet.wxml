@@ -1,0 +1,49 @@
+<!--wallet.wxml-->
+<import src="../../../common/tpl.wxml" />
+<!-- <view class="">
+  <view class="walletList">
+    <template is="wallet" data="{{token:'ETH_plain',address:'0x333',copy:'备份',ok:'okn'}}"></template>
+  </view>
+  <view class="walletList">
+    <template is="wallet" data="{{token:'ETH_plain',address:'0x333',copy:'',ok:'ok'}}"></template>
+  </view>
+  <view class="walletList">
+    <template is="wallet" data="{{token:'ETH_plain',address:'0x333',copy:'',ok:'okn'}}"></template>
+  </view>
+</view> -->
+
+<view wx:for="{{walletList}}" wx:key="name">
+  <view class="walletList">
+    <view class="kind-list-item cell">
+      <view class="kind-list-item-hd">
+        <image class="logo" src="../../../image/ETH.png"></image>
+
+          <view class="flex">
+            <view class="name omit">{{item.name}}</view>
+            <view class="address omit" data-strjson="{{item.wallet.strjson}}" data-name='{{item.name}}' data-address='{{item.wallet.address}}' data-ok='{{item.ok}}' data-index='{{index}}' bindtap="tap" bindlongtap="longtap" bindtouchend="touchend">{{item.wallet.address}}</view>
+          </view>
+
+        <!-- <view class="kind-list-text omit" data-strjson="{{item.wallet.strjson}}" data-name='{{item.name}}' data-address='{{item.wallet.address}}' data-ok='{{item.ok}}' data-index='{{index}}' bindtap="tap" bindlongtap="longtap" bindtouchend="touchend">{{item.wallet.address}}</view> -->
+        <view class="red" hidden="{{!item.copy}}" data-index='{{index}}' bindtap="modalinput">备份</view>
+        <image class="ok" hidden="{{!item.ok}}" src="../../../image/ok.png"></image>
+      </view>
+    </view>
+  </view>
+  <modal hidden="{{hiddenmodalput}}" data-index="{{index}}" title="{{modalChange? arr2.title : arr1.title}}" confirm-text="{{modalChange? arr2.confirmText : arr1.confirmText}}" cancel-text="{{modalChange? arr2.cancelText : arr1.cancelText}}" bindcancel="cancel" bindconfirm="confirm">
+    <input name="password" type='text' bindinput="passWdInput" placeholder="请输入密码"/>
+  </modal>
+</view>
+
+<view class="" bindtap="">
+  <template is="urlWallet" data="{{url:'../createWallet/createWallet',text:'创建钱包'}}"></template>
+</view>
+<view class="">
+  <template is="urlWallet" data="{{url:'../inputWallet/inputWallet',text:'导入钱包'}}"></template>
+</view>
+
+<!-- <view class="btn">
+    <template is="btnPlain" data="{{text:'创建钱包'}}"></template>
+  </view>
+  <view class="btn">
+    <template is="btnPlain" data="{{text:'导入钱包'}}"></template>
+  </view> -->

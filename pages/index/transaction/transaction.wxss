@@ -1,0 +1,125 @@
+.wrap {
+  margin-top: 20rpx;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  width:96%;
+  margin-left: 2%;
+}
+.flex_item{
+  flex:2;
+  
+}
+
+.color {
+  color: grey;
+  font-size: 30rpx;
+}
+
+.logo {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.tr {
+  text-align: right;
+}
+
+.ml {
+  margin-left: 250rpx;
+}
+
+.mt {
+  margin-top: 20rpx;
+}
+
+.txbj {
+  width: 400rpx;
+  height: 400rpx;
+  background-image: url('https://www.aethercoder.com:3000/images/bg1.png');
+  background-size: 400rpx 400rpx;
+    border:1rpx solid white;  
+  margin: 0 auto;
+}
+
+.txheader {
+  background-color: white;
+}
+
+.omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+}
+
+.unshow {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.right {
+  width: 200rpx;
+  text-align: right;
+  /* border:1rpx solid grey;   */
+}
+
+.left {
+  width: 500rpx;
+  text-align: left;
+  /* border:1rpx solid grey;   */
+}
+
+.btn1 {
+  width: 375rpx;
+  padding-right: 30rpx;
+  text-align: right;
+  /* border:1rpx solid grey;    */
+}
+
+.btn2 {
+  width: 375rpx;
+  padding-left: 30rpx;
+  text-align: left;
+  /* border:1rpx solid grey;    */
+}
+
+.inline {
+  display: flex;
+}
+
+.white {
+  color: white;
+}
+
+.balance {
+  font-size: 60rpx;
+  text-align: center;
+  /* border:1rpx solid grey;  */
+  margin-top: 150rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width:70%;
+  margin-left: 15%;
+}
+
+.eth {
+  font-size: 36rpx;
+  text-align: center;
+  /* border:1rpx solid grey;  */
+}
+.process{
+  width:90%;
+  /* text-align: center; */
+  margin-left: 5%
+}
+.border{
+  border: 1rpx solid grey;
+}
